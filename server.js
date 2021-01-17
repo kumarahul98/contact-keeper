@@ -3,6 +3,11 @@ const app = express();
 const connectDB = require('./config/db');
 
 connectDB();
+
+// Init Middleware
+app.use(express.json({extended: false}));
+
+//Get operation
 app.get('/',(req,res)=> res.jsonp({msg: 'welcome to contact keeper'}));
 
 
