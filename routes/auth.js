@@ -29,7 +29,7 @@ router.post('/', [
             id: user.id
         }
         }
-        jwt.sign(payload, config.get('jwtSecret'), { expiresIn: 3600}, (err, token) => {
+        jwt.sign(payload, config.get('jwtSecret'), { expiresIn: 36000}, (err, token) => {
             if(err){
                 console.log(err);
             }
